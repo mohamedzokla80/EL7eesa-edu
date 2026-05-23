@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary: #25343F (Dark slate blue) */
+  --color-primary-50: #eef1f3;
+  --color-primary-100: #d5dce2;
+  --color-primary-200: #b5c3cc;
+  --color-primary-300: #8fa5b3;
+  --color-primary-400: #6f8a9a;
+  --color-primary-500: #557283;
+  --color-primary-600: #425b6a;
+  --color-primary-700: #334855;
+  --color-primary-800: #25343f; /* Target */
+  --color-primary-900: #202c35;
+  --color-primary-950: #151d24;
+
+  /* Accent: #FF9B51 (Warm orange) */
+  --color-accent-50: #fff5ed;
+  --color-accent-100: #ffeadd;
+  --color-accent-200: #ffcfb0;
+  --color-accent-300: #ffb484;
+  --color-accent-400: #ff9b51; /* Target */
+  --color-accent-500: #f97926;
+  --color-accent-600: #ea5c10;
+  --color-accent-700: #c3450e;
+  --color-accent-800: #9b3612;
+  --color-accent-900: #7d2e13;
+  --color-accent-950: #431406;
+
+  /* Surface & Slate: Backgrounds #EAEFEF, Secondary #BFC9D1, Text #25343F */
+  --color-surface-50: #eaefef; /* Target BG */
+  --color-surface-100: #d6e2e5;
+  --color-surface-200: #bfc9d1; /* Target Secondary */
+  --color-surface-300: #a1b2bd;
+  --color-surface-400: #829aa8;
+  --color-surface-500: #678292;
+  --color-surface-600: #516876;
+  --color-surface-700: #41535e;
+  --color-surface-800: #33434d;
+  --color-surface-900: #25343f; /* Target Text */
+  --color-surface-950: #17232b;
+
+  /* Slate Override for text colors */
+  --color-slate-50: #eaefef;
+  --color-slate-100: #d6e2e5;
+  --color-slate-200: #bfc9d1;
+  --color-slate-300: #a1b2bd;
+  --color-slate-400: #829aa8;
+  --color-slate-500: #678292;
+  --color-slate-600: #516876;
+  --color-slate-700: #41535e;
+  --color-slate-800: #33434d;
+  --color-slate-900: #25343f;
+  --color-slate-950: #17232b;
+
+  --font-cairo: "Cairo", sans-serif;
+}
+
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-cairo);
+    direction: rtl;
+    background-color: var(--color-surface-50);
+    color: var(--color-surface-900);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-primary-600);
+    color: white;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(
+      135deg,
+      var(--color-primary-600),
+      var(--color-accent-500)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(37, 52, 63, 0.2);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(37, 52, 63, 0.1);
+  }
+
+  .gradient-border {
+    position: relative;
+    border-radius: 1rem;
+  }
+
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      var(--color-accent-500),
+      var(--color-accent-500)
+    );
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .glow {
+    box-shadow:
+      0 0 40px rgba(99, 102, 241, 0.3),
+      0 0 80px rgba(255, 155, 81, 0.4);
+  }
+
+  .glow-sm {
+    box-shadow: 0 0 20px rgba(37, 52, 63, 0.2);
+  }
+
+  .hover-glow {
+    transition: all 0.5s ease;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 
+      0 0 30px rgba(255, 155, 81, 0.25), 
+      0 0 60px rgba(255, 155, 81, 0.1) !important;
+    border-color: rgba(255, 155, 81, 0.4) !important;
+  }
+
+  .hero-gradient {
+    background:
+      radial-gradient(
+        ellipse 80% 50% at 50% -20%,
+        rgba(37, 52, 63, 0.15),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 60% 40% at 80% 50%,
+        rgba(255, 155, 81, 0.4),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 60% 40% at 20% 80%,
+        rgba(37, 52, 63, 0.05),
+        transparent
+      );
+  }
+
+  .section-gradient {
+    background: radial-gradient(
+      ellipse 80% 50% at 50% 50%,
+      rgba(37, 52, 63, 0.05),
+      transparent
+    );
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 40px rgba(99, 102, 241, 0.6),
+      0 0 60px rgba(6, 182, 212, 0.3);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    var(--color-primary-600),
+    var(--color-accent-500)
+  );
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    var(--color-accent-500),
+    var(--color-accent-500)
+  );
+}
+
+/* trigger rebuild */
+/* rebuild details */
