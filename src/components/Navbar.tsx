@@ -73,7 +73,7 @@ export default function Navbar() {
             onClick={() => handleNavClick("#home")}
           >
             <Image
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="سيستمني"
               width={45}
               height={45}

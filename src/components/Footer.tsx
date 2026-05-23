@@ -148,7 +148,7 @@ export default function Footer() {
             className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300"
           >
             <Image
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="سيستمني"
               width={36}
               height={36}
