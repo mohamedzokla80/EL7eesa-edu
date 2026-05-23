@@ -73,7 +73,7 @@ export default function Impact() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 text-[#25343F]">
             كيف سيغير <span className="text-[#FF9B51]">سيستمني</span> عملك؟
           </h2>
-          <p className="text-[#BFC9D1] text-lg max-w-2xl mx-auto font-medium">
+          <p className="text-[#25343F]/80 text-lg max-w-2xl mx-auto font-medium">
             أرقام حقيقية توضح الفارق الشاسع في الأداء والمجهود مقارنة بالطرق التقليدية المعتادة
           </p>
         </motion.div>
@@ -107,7 +107,7 @@ export default function Impact() {
                   />
                   <XAxis
                     dataKey="name"
-                    tick={{ fill: "#BFC9D1", fontSize: 12, fontWeight: 500 }}
+                    tick={{ fill: "#25343F", fontSize: 12, fontWeight: 500 }}
                     axisLine={{ stroke: "#EAEFEF" }}
                     tickLine={false}
                   />
@@ -274,7 +274,7 @@ export default function Impact() {
                     y="75%"
                     textAnchor="middle"
                     dominantBaseline="central"
-                    fill="#BFC9D1"
+                    fill="#25343F"
                     fontSize="13"
                     fontWeight="500"
                   >

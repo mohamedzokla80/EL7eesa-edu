@@ -48,7 +48,7 @@ export default function Pricing() {
             <span className="text-[#FF9B51]">بدون اشتراكات شهرية</span>{" "}
             متعبة!
           </h2>
-          <p className="text-[#BFC9D1] text-lg max-w-2xl mx-auto font-medium">
+          <p className="text-[#25343F]/80 text-lg max-w-2xl mx-auto font-medium">
             ادفع مرة واحدة فقط واستمتع بامتلاك النظام مدى الحياة
           </p>
         </motion.div>

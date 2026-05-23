@@ -64,7 +64,7 @@ export default function Contact() {
             هل أنت مستعد لنقل سنترك{" "}
             <span className="text-[#FF9B51]">للمستوى التالي؟</span>
           </h2>
-          <p className="text-[#BFC9D1] text-lg max-w-2xl mx-auto font-medium">
+          <p className="text-[#25343F]/80 text-lg max-w-2xl mx-auto font-medium">
             اترك بياناتك وسيقوم فريق المبيعات بالتواصل معك فوراً لتحديد موعد وتجربة النظام بنفسك.
           </p>
         </motion.div>
@@ -284,7 +284,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full sm:w-auto px-12 bg-[#25343F] hover:bg-[#FF9B51] hover:text-[#25343F] text-white py-4 rounded-full font-bold text-lg shadow-xl shadow-[#25343F]/20 hover:shadow-[#FF9B51]/30 transition-all duration-400 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 hover:-translate-y-1"
+                      className="w-full sm:w-auto px-8 sm:px-12 bg-[#25343F] hover:bg-[#FF9B51] hover:text-[#25343F] text-white py-4 rounded-full font-bold text-base sm:text-lg shadow-xl shadow-[#25343F]/20 hover:shadow-[#FF9B51]/30 transition-all duration-400 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 hover:-translate-y-1 whitespace-nowrap"
                     >
                       {isSubmitting ? (
                         <>

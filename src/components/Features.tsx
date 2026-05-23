@@ -85,7 +85,7 @@ export default function Features() {
             إمكانيات تجعلك{" "}
             <span className="text-[#FF9B51]">في المقدمة دائماً</span>
           </h2>
-          <p className="text-[#BFC9D1] text-lg max-w-2xl mx-auto font-medium">
+          <p className="text-[#25343F]/80 text-lg max-w-2xl mx-auto font-medium">
             مجموعة متكاملة من الأدوات المتقدمة المصممة خصيصاً لتقديم أفضل تجربة تعليمية وإدارية
           </p>
         </motion.div>
