@@ -60,10 +60,10 @@ export default function Navbar() {
       }`}
     >
       <div
-        className={`mx-auto transition-all duration-500 ${
+        className={`w-full mx-auto transition-all duration-500 relative z-50 ${
           isScrolled
-            ? "max-w-7xl bg-white/90 backdrop-blur-md shadow-lg shadow-[#25343F]/5 py-3 px-6 rounded-3xl border border-[#BFC9D1]/50"
-            : "max-w-full bg-transparent py-4 px-6 sm:px-8 lg:px-12 rounded-none border-transparent shadow-none"
+            ? "max-w-7xl bg-white/90 backdrop-blur-md shadow-lg shadow-[#25343F]/5 py-3 px-4 sm:px-6 rounded-3xl border border-[#BFC9D1]/50"
+            : "max-w-full bg-transparent py-4 px-4 sm:px-8 lg:px-12 rounded-none border-transparent shadow-none"
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -134,7 +134,7 @@ export default function Navbar() {
             animate={{ opacity: 1, clipPath: "circle(150% at 50% 0)" }}
             exit={{ opacity: 0, clipPath: "circle(0% at 50% 0)" }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-[-1] lg:hidden bg-[#EAEFEF]/95 backdrop-blur-3xl flex flex-col items-center justify-center h-[100dvh] w-screen"
+            className="fixed inset-0 z-40 lg:hidden bg-[#EAEFEF]/95 backdrop-blur-3xl flex flex-col items-center justify-center h-[100dvh] w-full"
           >
             <div className="flex flex-col items-center justify-center space-y-6 sm:space-y-8 w-full px-6">
               {navLinks.map((link, idx) => (

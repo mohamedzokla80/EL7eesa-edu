@@ -32,7 +32,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 flex items-center justify-center min-h-[80vh]">
+      <div className="relative max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-20 sm:pb-24 flex items-center justify-center min-h-[80vh]">
         <div className="flex flex-col items-center w-full">
           {/* Text Content */}
           <motion.div 
@@ -58,7 +58,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 text-[#25343F]"
+              className="text-[1.7rem] sm:text-5xl lg:text-6xl font-black leading-tight mb-6 text-[#25343F]"
             >
               ريح بالك..{" "}
               <br />
@@ -72,7 +72,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-lg text-[#25343F]/80 leading-relaxed mb-10 max-w-2xl mx-auto"
+              className="text-base sm:text-lg text-[#25343F]/80 leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto px-1 sm:px-0"
             >
               نظام متكامل صُمم خصيصاً للمعلمين لتسهيل إدارة الحصص، متابعة
               الغياب، تنظيم الحسابات، وتوفير تطبيق خاص لطلابك.. كل هذا من مكان
@@ -83,11 +83,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="flex flex-wrap justify-center gap-4"
+              className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 w-full px-4 sm:px-0"
             >
               <button
                 onClick={() => handleScroll("#features")}
-                className="bg-[#FF9B51] text-white px-5 sm:px-8 py-3.5 sm:py-4 rounded-2xl text-base sm:text-lg font-bold shadow-xl shadow-[#FF9B51]/25 hover:bg-[#25343F] hover:shadow-[#25343F]/40 hover:text-[#FF9B51] transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3"
+                className="w-full sm:w-auto bg-[#FF9B51] text-white px-5 sm:px-8 py-3.5 sm:py-4 rounded-2xl text-base sm:text-lg font-bold shadow-xl shadow-[#FF9B51]/25 hover:bg-[#25343F] hover:shadow-[#25343F]/40 hover:text-[#FF9B51] transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3"
               >
                 <span className="whitespace-nowrap text-base sm:text-lg">استكشف مميزات النظام</span>
                 <HiOutlineArrowRight className="w-5 h-5 rtl:rotate-180" />
@@ -95,7 +95,7 @@ export default function Hero() {
 
               <button
                 onClick={() => handleScroll("#services")}
-                className="glass-light text-[#25343F] px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-[#BFC9D1]/10 transition-all duration-300 flex items-center gap-3"
+                className="w-full sm:w-auto glass-light text-[#25343F] px-8 py-3.5 sm:py-4 rounded-2xl text-base sm:text-lg font-semibold hover:bg-[#BFC9D1]/10 transition-all duration-300 flex items-center justify-center gap-3"
               >
                 <span>اكتشف خدماتنا</span>
                 <HiOutlineChevronDown className="w-5 h-5" />
