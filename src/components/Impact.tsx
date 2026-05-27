@@ -86,7 +86,7 @@ export default function Impact() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="bg-white rounded-[2rem] p-8 border border-[#BFC9D1]/50 shadow-sm hover:shadow-[0_0_40px_rgba(255,155,81,0.2)] hover:border-[#FF9B51]/40 hover:-translate-y-1 transition-all duration-500 flex flex-col justify-between"
+            className="bg-white rounded-[2rem] p-6 sm:p-8 border border-[#BFC9D1]/50 shadow-sm hover:shadow-[0_0_40px_rgba(255,155,81,0.2)] hover:border-[#FF9B51]/40 hover:-translate-y-1 transition-all duration-500 flex flex-col justify-between"
           >
             <div className="text-center mb-8">
               <h3 className="text-xl font-bold text-[#25343F] mb-2">
@@ -148,7 +148,7 @@ export default function Impact() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="bg-[#25343F] rounded-[2rem] p-8 shadow-xl hover:shadow-[0_0_40px_rgba(255,155,81,0.25)] hover:border-[#FF9B51]/40 hover:-translate-y-1 transition-all duration-500 flex flex-col justify-between relative overflow-hidden"
+             className="bg-[#25343F] rounded-[2rem] p-6 sm:p-8 shadow-xl hover:shadow-[0_0_40px_rgba(255,155,81,0.25)] hover:border-[#FF9B51]/40 hover:-translate-y-1 transition-all duration-500 flex flex-col justify-between relative overflow-hidden"
           >
             {/* Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#FF9B51]/20 rounded-full blur-3xl pointer-events-none" />
@@ -228,7 +228,7 @@ export default function Impact() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="bg-white rounded-[2rem] p-8 border border-[#BFC9D1]/50 shadow-sm hover:shadow-[0_0_40px_rgba(255,155,81,0.2)] hover:border-[#FF9B51]/40 hover:-translate-y-1 transition-all duration-500 flex flex-col justify-between"
+             className="bg-white rounded-[2rem] p-6 sm:p-8 border border-[#BFC9D1]/50 shadow-sm hover:shadow-[0_0_40px_rgba(255,155,81,0.2)] hover:border-[#FF9B51]/40 hover:-translate-y-1 transition-all duration-500 flex flex-col justify-between"
           >
             <div className="text-center mb-8">
               <h3 className="text-xl font-bold text-[#25343F] mb-2">
@@ -305,7 +305,7 @@ export default function Impact() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="mt-8 bg-white border border-[#BFC9D1]/50 rounded-[2rem] p-8 lg:p-10 shadow-sm"
+           className="mt-8 bg-white border border-[#BFC9D1]/50 rounded-[2rem] p-4 sm:p-8 lg:p-10 shadow-sm"
         >
           <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
             <h3 className="text-2xl font-black text-[#25343F]">
@@ -326,74 +326,85 @@ export default function Impact() {
           </div>
 
           <ChartContainer className="h-80" dir="ltr">
-            {(width, height) => (
-              <BarChart
-                width={width}
-                height={height}
-                data={[
-                  {
-                    category: "المجهود الإداري",
-                    traditional: 95,
-                    systemny: 10,
-                  },
-                  {
-                    category: "دقة الحسابات",
-                    traditional: 60,
-                    systemny: 100,
-                  },
-                  {
-                    category: "تفاعل الطلاب",
-                    traditional: 30,
-                    systemny: 90,
-                  },
-                  {
-                    category: "سرعة التصحيح",
-                    traditional: 20,
-                    systemny: 98,
-                  },
-                  {
-                    category: "تنظيم المواعيد",
-                    traditional: 40,
-                    systemny: 95,
-                  },
-                ]}
-                barSize={24}
-                barGap={8}
-                margin={{ top: 20, right: 0, left: -20, bottom: 0 }}
-              >
-                <CartesianGrid
-                  strokeDasharray="3 3"
-                  stroke="#EAEFEF"
-                  vertical={false}
-                />
-                <XAxis
-                  dataKey="category"
-                  tick={{ fill: "#25343F", fontSize: 13, fontWeight: 600 }}
-                  axisLine={{ stroke: "#BFC9D1" }}
-                  tickLine={false}
-                  dy={10}
-                />
-                <YAxis
-                  tick={{ fill: "#BFC9D1", fontSize: 12 }}
-                  axisLine={false}
-                  tickLine={false}
-                  domain={[0, 100]}
-                />
-                <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(234, 239, 239, 0.5)' }} />
-                <Bar
-                  dataKey="traditional"
-                  name="الطريقة التقليدية"
-                  fill="#BFC9D1"
-                  radius={[6, 6, 0, 0]}
-                />
-                <Bar
-                  dataKey="systemny"
-                  name="مع سيستمني"
-                  fill="#FF9B51"
-                  radius={[6, 6, 0, 0]}
-                />
-              </BarChart>
-            )}
+            {(width, height) => {
+              const isMobile = width < 560;
+              const dynamicBarSize = isMobile ? 12 : 24;
+              const dynamicBarGap = isMobile ? 4 : 8;
+              const fontSize = isMobile ? 10 : 13;
+              const yAxisFontSize = isMobile ? 9 : 12;
+              const margin = isMobile
+                ? { top: 20, right: 0, left: -32, bottom: 0 }
+                : { top: 20, right: 0, left: -20, bottom: 0 };
+
+              return (
+                <BarChart
+                  width={width}
+                  height={height}
+                  data={[
+                    {
+                      category: isMobile ? "الإداري" : "المجهود الإداري",
+                      traditional: 95,
+                      systemny: 10,
+                    },
+                    {
+                      category: isMobile ? "الحسابات" : "دقة الحسابات",
+                      traditional: 60,
+                      systemny: 100,
+                    },
+                    {
+                      category: isMobile ? "التفاعل" : "تفاعل الطلاب",
+                      traditional: 30,
+                      systemny: 90,
+                    },
+                    {
+                      category: isMobile ? "التصحيح" : "سرعة التصحيح",
+                      traditional: 20,
+                      systemny: 98,
+                    },
+                    {
+                      category: isMobile ? "المواعيد" : "تنظيم المواعيد",
+                      traditional: 40,
+                      systemny: 95,
+                    },
+                  ]}
+                  barSize={dynamicBarSize}
+                  barGap={dynamicBarGap}
+                  margin={margin}
+                >
+                  <CartesianGrid
+                    strokeDasharray="3 3"
+                    stroke="#EAEFEF"
+                    vertical={false}
+                  />
+                  <XAxis
+                    dataKey="category"
+                    tick={{ fill: "#25343F", fontSize: fontSize, fontWeight: 600 }}
+                    axisLine={{ stroke: "#BFC9D1" }}
+                    tickLine={false}
+                    dy={10}
+                  />
+                  <YAxis
+                    tick={{ fill: "#BFC9D1", fontSize: yAxisFontSize }}
+                    axisLine={false}
+                    tickLine={false}
+                    domain={[0, 100]}
+                  />
+                  <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(234, 239, 239, 0.5)' }} />
+                  <Bar
+                    dataKey="traditional"
+                    name="الطريقة التقليدية"
+                    fill="#BFC9D1"
+                    radius={[4, 4, 0, 0]}
+                  />
+                  <Bar
+                    dataKey="systemny"
+                    name="مع سيستمني"
+                    fill="#FF9B51"
+                    radius={[4, 4, 0, 0]}
+                  />
+                </BarChart>
+              );
+            }}
           </ChartContainer>
         </motion.div>
       </div>

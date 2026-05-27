@@ -154,7 +154,7 @@ export default function Navbar() {
                   {activeSection === link.href.replace("#", "") && (
                     <motion.div
                       layoutId="active-mobile"
-                      className="absolute -left-6 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-[#FF9B51] shadow-[0_0_12px_rgba(255,155,81,0.8)]"
+                      className="absolute -right-6 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-[#FF9B51] shadow-[0_0_12px_rgba(255,155,81,0.8)]"
                     />
                   )}
                 </motion.button>
