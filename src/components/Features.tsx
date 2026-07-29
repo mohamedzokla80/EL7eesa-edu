@@ -2,14 +2,20 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { HiOutlineBell, HiOutlineVideoCamera, HiOutlineAcademicCap, HiOutlineEye, HiOutlineChartBar, HiOutlineUsers } from "react-icons/hi";
+import { HiOutlineBell, HiOutlineVideoCamera, HiOutlineAcademicCap, HiOutlineEye, HiOutlineChartBar, HiOutlineUsers, HiOutlineDocumentText } from "react-icons/hi";
 
 const features = [
   {
     id: 1,
-    icon: <HiOutlineVideoCamera className="w-8 h-8" />,
-    title: "دعم الفيديوهات التعليمية",
-    description: "منصة متكاملة لرفع حصصك المسجلة وتقسيمها إلى كورسات ومحاضرات منظمة، مع حماية كاملة للمحتوى لضمان عدم تسريبه. ليراجعها الطالب في أي وقت بسهولة وبدون تعقيد.",
+    icon: <HiOutlineChartBar className="w-8 h-8" />,
+    title: "1. لوحة تحكم الطالب (Student Dashboard)",
+    description: (
+      <ul className="list-disc list-inside space-y-1">
+        <li><strong>ملخص إحصائي فوري:</strong> نسبة الحضور، المبالغ المدفوعة، إجمالي الامتحانات، ونسبة النجاح.</li>
+        <li><strong>الرسومات البيانية للأداء:</strong> مخططات لتطور الدرجات وسجل الحضور والغياب.</li>
+        <li><strong>سجل آخر المدفوعات والدروس المتاحة.</strong></li>
+      </ul>
+    ),
     className: "md:col-span-2 bg-[#25343F] text-[#EAEFEF] border-transparent overflow-hidden relative",
     iconBg: "bg-[#FF9B51] text-[#25343F]",
     textColor: "text-[#BFC9D1]",
@@ -18,17 +24,17 @@ const features = [
   {
     id: 2,
     icon: <HiOutlineBell className="w-8 h-8" />,
-    title: "تنبيهات فورية",
-    description: "تواصل دائم مع طلابك لإبلاغهم بأي تغيير في المواعيد أو مواعيد الامتحانات والنتائج لضمان سير العملية بانتظام.",
+    title: "2. لافتة التنبيهات الإجازات (Holiday Banner)",
+    description: "تظهر بشكل بارز وأنيق في شاشة الطالب الرئيسية وفي صفحة الحضور وتوضح عدم وجود حصة اليوم وأنه لن يتم احتساب أي غياب.",
     className: "md:col-span-1 bg-white border border-[#BFC9D1]/50 text-[#25343F]",
     iconBg: "bg-[#EAEFEF] text-[#FF9B51]",
     textColor: "text-[#25343F]/80",
   },
   {
     id: 3,
-    icon: <HiOutlineChartBar className="w-8 h-8" />,
-    title: "تقارير شاملة",
-    description: "لوحة تحكم تمنحك نظرة عامة على أعداد الطلاب، الإيرادات، وأداء كل مجموعة لاتخاذ قرارات أسرع وأدق.",
+    icon: <HiOutlineUsers className="w-8 h-8" />,
+    title: "3. الملف الشخصي وتفاصيل المجموعة",
+    description: "مراجعة بيانات الطالب الشخصية والتحقق من حالته. عرض تفاصيل المجموعة المعين بها (الموعد، أيام الأسبوع، المكان، المعلم).",
     className: "md:col-span-1 bg-[#FF9B51] text-[#25343F] border-transparent",
     iconBg: "bg-[#25343F] text-[#FF9B51]",
     textColor: "text-[#25343F]/90",
@@ -36,8 +42,8 @@ const features = [
   {
     id: 4,
     icon: <HiOutlineAcademicCap className="w-8 h-8" />,
-    title: "بنك أسئلة متكامل",
-    description: "إمكانية إضافة أسئلة متنوعة لعمل امتحانات سريعة (Quizzes) وتصحيحها تلقائياً لتوفير وقتك ومجهودك.",
+    title: "4. سجل الحضور والغياب (Attendance Logs)",
+    description: "تتبع سجل الحضور والغياب التاريخي لمعرفة الأيام التي حضرها أو غاب فيها الطالب وحساب النسبة المئوية.",
     className: "md:col-span-1 bg-white border border-[#BFC9D1]/50 text-[#25343F]",
     iconBg: "bg-[#EAEFEF] text-[#FF9B51]",
     textColor: "text-[#25343F]/80",
@@ -45,21 +51,73 @@ const features = [
   {
     id: 5,
     icon: <HiOutlineEye className="w-8 h-8" />,
-    title: "مراقبة للامتحانات",
-    description: "تابع طلابك أثناء حل الامتحان خطوة بخطوة واعرف الوقت الذي استغرقه كل طالب في كل سؤال بدقة.",
+    title: "5. نتائج الامتحانات ونموذج الإجابة",
+    description: (
+      <ul className="list-disc list-inside space-y-1">
+        <li>عرض الدرجات المحققة وحالة النتيجة.</li>
+        <li><strong>مراجعة نموذج الإجابة:</strong> الدخول لمراجعة الأسئلة ومقارنة الإجابة بالنموذجية وعرض درجات المقالي وتعليقات المعلم.</li>
+      </ul>
+    ),
     className: "md:col-span-1 bg-white border border-[#BFC9D1]/50 text-[#25343F]",
     iconBg: "bg-[#EAEFEF] text-[#FF9B51]",
     textColor: "text-[#25343F]/80",
   },
   {
     id: 6,
-    icon: <HiOutlineUsers className="w-8 h-8" />,
-    title: "صلاحيات متقدمة للمساعدين (السكرتارية)",
-    description: "نظام صلاحيات دقيق يتيح لك إعطاء مهام محددة للمساعدين مثل تسجيل الحضور واستلام النقدية، دون السماح لهم بالتدخل في التفاصيل المالية أو الإدارية الحساسة.",
-    className: "md:col-span-2 lg:col-span-3 bg-[#EAEFEF] border border-[#BFC9D1] text-[#25343F]",
+    icon: <HiOutlineChartBar className="w-8 h-8" />,
+    title: "6. سجل المدفوعات والاشتراكات",
+    description: "عرض سجل بجميع المبالغ والاشتراكات التي سددها الطالب للسنتر وتواريخها وتفاصيلها.",
+    className: "md:col-span-1 bg-white border border-[#BFC9D1]/50 text-[#25343F]",
+    iconBg: "bg-[#EAEFEF] text-[#FF9B51]",
+    textColor: "text-[#25343F]/80",
+  },
+  {
+    id: 7,
+    icon: <HiOutlineVideoCamera className="w-8 h-8" />,
+    title: "7. بوابة الكورسات ومشاهدة الفيديوهات",
+    description: (
+      <ul className="list-disc list-inside space-y-1">
+        <li><strong>مشاهدة الدروس</strong> المتاحة لصفه الدراسي.</li>
+        <li><strong>قيود الحماية:</strong> مشاهدة بالتوالي، عدّاد مشاهدات محدد، منع تسريع الفيديو، وتأمين ببصمة الجهاز (Device Fingerprint).</li>
+      </ul>
+    ),
+    className: "md:col-span-2 bg-[#EAEFEF] border border-[#BFC9D1] text-[#25343F]",
     iconBg: "bg-white text-[#FF9B51] shadow-sm",
     textColor: "text-[#25343F]/80",
   },
+  {
+    id: 8,
+    icon: <HiOutlineAcademicCap className="w-8 h-8" />,
+    title: "8. نظام الكويزات أونلاين (Quizzes Attempt)",
+    description: (
+      <ul className="list-disc list-inside space-y-1">
+        <li>واجهة تفاعلية بعدّاد تنازلي وتقديم الإجابات تلقائياً.</li>
+        <li>منع تحديث الصفحة والالتزام بقواعد التنقل (مثل منع الرجوع للخلف).</li>
+        <li>استعراض النتيجة والتقييم الفوري بالتفصيل.</li>
+      </ul>
+    ),
+    className: "md:col-span-1 bg-white border border-[#BFC9D1]/50 text-[#25343F]",
+    iconBg: "bg-[#EAEFEF] text-[#FF9B51]",
+    textColor: "text-[#25343F]/80",
+  },
+  {
+    id: 9,
+    icon: <HiOutlineDocumentText className="w-8 h-8" />,
+    title: "9. الواجبات المنزلية (Homeworks Tracking)",
+    description: "متابعة الواجبات المطلوبة ومواعيد تسليمها. التحقق من حالة التسليم ومراجعة ملاحظات وتصحيحات المدرس.",
+    className: "md:col-span-1 bg-white border border-[#BFC9D1]/50 text-[#25343F]",
+    iconBg: "bg-[#EAEFEF] text-[#FF9B51]",
+    textColor: "text-[#25343F]/80",
+  },
+  {
+    id: 10,
+    icon: <HiOutlineBell className="w-8 h-8" />,
+    title: "10. مركز الإشعارات (Notifications Center)",
+    description: "صندوق إشعارات مدمج يستقبل تنبيهات المنصة والرسائل المباشرة الموجهة من المدرس مع إمكانية تحديدها كمقروءة وتصفيتها.",
+    className: "md:col-span-1 bg-white border border-[#BFC9D1]/50 text-[#25343F]",
+    iconBg: "bg-[#EAEFEF] text-[#FF9B51]",
+    textColor: "text-[#25343F]/80",
+  }
 ];
 
 export default function Features() {
@@ -78,15 +136,14 @@ export default function Features() {
         >
           <div className="inline-flex items-center gap-2 bg-[#FF9B51]/10 px-5 py-2 rounded-full mb-6 border border-[#FF9B51]/20 shadow-sm">
             <span className="text-[#FF9B51] text-sm font-bold tracking-wider">
-              مميزات النظام
+              بوابة الطالب (Student Portal)
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 text-[#25343F]">
-            إمكانيات تجعلك{" "}
-            <span className="text-[#FF9B51]">في المقدمة دائماً</span>
+            ثانياً: بوابة <span className="text-[#FF9B51]">الطالب الإلكترونية</span>
           </h2>
           <p className="text-[#25343F]/80 text-lg max-w-2xl mx-auto font-medium">
-            مجموعة متكاملة من الأدوات المتقدمة المصممة خصيصاً لتقديم أفضل تجربة تعليمية وإدارية
+            بوابة إلكترونية مبسطة ومتجاوبة تتيح للطلاب التفاعل مع المنصة ومتابعة مستواهم.
           </p>
         </motion.div>
 
@@ -114,9 +171,9 @@ export default function Features() {
                     {feature.title}
                   </h3>
                 </div>
-                <p className={`text-base leading-relaxed ${feature.textColor} font-medium`}>
+                <div className={`text-sm md:text-base leading-relaxed ${feature.textColor} font-medium overflow-y-auto max-h-[120px] custom-scrollbar`}>
                   {feature.description}
-                </p>
+                </div>
               </div>
             </motion.div>
           ))}

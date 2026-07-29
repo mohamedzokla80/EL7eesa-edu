@@ -7,27 +7,52 @@ import { HiOutlineBookOpen, HiOutlineShieldCheck, HiOutlineLightningBolt, HiOutl
 const features = [
   {
     id: "01",
-    icon: <HiOutlineBookOpen className="w-6 h-6" />,
-    title: "تركيزك على التدريس",
-    desc: "نتولى الأعباء الإدارية عنك",
+    icon: <HiOutlineChartBar className="w-6 h-6" />,
+    title: "1. لوحة التحكم والإحصائيات (Dashboard & Statistics)",
+    desc: (
+      <ul className="list-disc list-inside space-y-2">
+        <li><strong>إحصائيات شاملة لحظية:</strong> عرض إجمالي الطلاب، الطلاب المقبولين، الطلبات المعلقة، المرفوضين، والمحظورين.</li>
+        <li><strong>تحليل نوعية الطلاب:</strong> رسم بياني ونسب تفصيلية لطلاب السنتر (الحضور) مقابل طلاب الأونلاين.</li>
+        <li><strong>إحصائيات مالية وسجل الحضور:</strong> تتبع الأرباح وإجمالي المبيعات، ومعدل حضور الطلاب اليومي.</li>
+        <li><strong>المراجعة السريعة للطلبات:</strong> قسم مخصص للطلبات الجديدة المسجلة مؤخراً لتسريع اتخاذ القرار.</li>
+      </ul>
+    ),
   },
   {
     id: "02",
     icon: <HiOutlineShieldCheck className="w-6 h-6" />,
-    title: "نظام آمن وموثوق",
-    desc: "بياناتك في أمان تام",
+    title: "2. إدارة طلبات التسجيل الجديدة (Pending Students Approval)",
+    desc: (
+      <ul className="list-disc list-inside space-y-2">
+        <li><strong>مراجعة إثباتات الدفع:</strong> فحص بيانات تحويل الاشتراك للطلاب الجدد (عبر المحافظ الإلكترونية أو InstaPay) ومراجعة صورة إيصال الدفع المرفوع بدقة مع خيار تكبير الصورة أو فتحها في نافذة جديدة.</li>
+        <li><strong>قرارات فورية:</strong> إمكانية القبول (Approve)، الرفض (Reject)، الحظر (Block) أو الحذف النهائي للطلب مع إرسال إشعارات فورية للطالب بحالة حسابه.</li>
+      </ul>
+    ),
   },
   {
     id: "03",
     icon: <HiOutlineLightningBolt className="w-6 h-6" />,
-    title: "سرعة وكفاءة عالية",
-    desc: "أنجز في دقائق ما كان يأخذ ساعات",
+    title: "3. إدارة شؤون الطلاب (Students Directory)",
+    desc: (
+      <ul className="list-disc list-inside space-y-2">
+        <li><strong>البحث والتصفية المتقدمة:</strong> البحث بالاسم، الكود الدراسي (ID)، أو رقم الهاتف. وتصفية الطلاب حسب الحالة (نشط، معلق، محظور، مرفوض) أو نوع الطالب (سنتر، أونلاين).</li>
+        <li><strong>الملف الشخصي التفصيلي:</strong> عرض البيانات الشخصية والدراسية لكل طالب (بما في ذلك وظيفة ولي الأمر، رقم هاتف ولي الأمر، المنطقة الجغرافية، والمجموعة الحالية).</li>
+        <li><strong>بطاقات الـ QR وسجلات الحضور والمالية:</strong> توليد بطاقة QR فريدة لكل طالب سنتر، مع إمكانية تصدير بطاقات QR لجميع الطلاب دفعة واحدة في ملف ZIP مضغوط.</li>
+        <li><strong>الترقية الجماعية (Bulk Promotion):</strong> ترقية مجموعة من الطلاب دفعة واحدة إلى صف دراسي جديد أو عام دراسي جديد أو نقلهم لمجموعة أخرى بضغطة زر.</li>
+      </ul>
+    ),
   },
   {
     id: "04",
-    icon: <HiOutlineChartBar className="w-6 h-6" />,
-    title: "قرارات مبنية على بيانات",
-    desc: "تقارير دقيقة لأداء السنتر والطلاب",
+    icon: <HiOutlineCheckCircle className="w-6 h-6" />,
+    title: "4. إدارة السنتر والمجموعات (Center & Group Management)",
+    desc: (
+      <ul className="list-disc list-inside space-y-2">
+        <li><strong>السنوات الدراسية (Academic Years):</strong> إنشاء وتعديل السنوات الدراسية وتحديد الرسوم الخاصة بكل سنة (دفع شهري ثابت أو دفع لكل حصة).</li>
+        <li><strong>المجموعات الدراسية (Groups):</strong> إنشاء المجموعات وتحديد أيام الحصص الأسبوعية والمواعيد والسعة القصوى. إضافة الطلاب للمجموعات، أو نقلهم وتغيير مجموعتهم مع الحفاظ التام على سجلات حضورهم ومدفوعاتهم القديمة ونقلها تلقائياً.</li>
+        <li><strong>تسجيل الحضور (Attendance Tracking):</strong> إمكانية تسجيل الحضور يدوياً عبر إدخال كود الطالب أو رقم هاتفه. إمكانية تسجيل الحضور الذكي والسريع عبر عمل مسح (Scan) لبطاقة الـ QR الخاصة بالطالب باستخدام الكاميرا. عرض ومراجعة سجل الحضور والغياب التاريخي للمجموعة وتصفيتها بالتواريخ.</li>
+      </ul>
+    ),
   },
 ];
 
@@ -70,9 +95,10 @@ export default function About() {
                     <h3 className="text-xl font-bold text-[#25343F] mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-[#25343F]/80 text-sm leading-relaxed">
+                    <div className="text-[#25343F]/80 text-sm leading-relaxed">
                       {item.desc}
-                    </p>
+                    </div>
+                    
                   </div>
                 </motion.div>
               ))}
@@ -104,7 +130,7 @@ export default function About() {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-black mb-8 leading-[1.3] text-[#25343F]"
             >
-              نحن في <span className="text-[#FF9B51]">سيستمني</span> ندرك...
+              نحن في <span className="text-[#FF9B51]">الحصة</span> ندرك...
               <br />
               حجم مجهودك ونسعى <span className="text-[#FF9B51] underline decoration-4 underline-offset-8">لراحتك</span>.
             </motion.h2>
@@ -136,10 +162,10 @@ export default function About() {
               <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1.5 h-3/4 bg-gradient-to-b from-[#25343F] to-[#FF9B51] rounded-l-full" />
               <div className="pr-4">
                 <p className="text-2xl font-bold text-[#25343F] mb-2">
-                  "التدريس والشرح"
+                  أولاً: لوحة تحكم المعلم (El7essa-Teacher)
                 </p>
                 <p className="text-[#25343F]/80">
-                  بينما نتولى نحن عنك كل الأعباء الإدارية والتنظيمية.
+                  لوحة التحكم المخصصة للمدرس ومساعديه لإدارة العملية التعليمية بشكل كامل وحضوري وإلكتروني.
                 </p>
               </div>
             </motion.div>

@@ -93,35 +93,35 @@ export default function Contact() {
 
               <div className="space-y-8">
                 {/* Phone */}
-                <a href="tel:01090039262" className="flex items-center gap-5 group">
-                  <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-[#FF9B51] transition-all duration-300 border border-white/10 group-hover:border-[#FF9B51]">
+                <a href="tel:01090039262" className="flex items-center gap-4 sm:gap-5 group w-full">
+                  <div className="w-12 h-12 shrink-0 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-[#FF9B51] transition-all duration-300 border border-white/10 group-hover:border-[#FF9B51]">
                     <HiOutlinePhone className="w-5 h-5 text-white/80 group-hover:text-[#25343F] transition-colors duration-300" />
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <p className="text-white/60 text-xs font-medium mb-1">رقم خدمة العملاء:</p>
-                    <p className="text-white font-bold text-lg tracking-wider" dir="ltr">01090039262</p>
+                    <p className="text-white font-bold text-base sm:text-lg tracking-wider truncate" dir="ltr">01090039262</p>
                   </div>
                 </a>
 
                 {/* WhatsApp */}
-                <a href="https://wa.me/201090039262" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 group">
-                  <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-[#FF9B51] transition-all duration-300 border border-white/10 group-hover:border-[#FF9B51]">
+                <a href="https://wa.me/201090039262" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 sm:gap-5 group w-full">
+                  <div className="w-12 h-12 shrink-0 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-[#FF9B51] transition-all duration-300 border border-white/10 group-hover:border-[#FF9B51]">
                     <FaWhatsapp className="w-5 h-5 text-white/80 group-hover:text-[#25343F] transition-colors duration-300" />
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <p className="text-white/60 text-xs font-medium mb-1">رابط الواتساب المباشر:</p>
-                    <p className="text-white font-bold text-lg">مراسلة فورية</p>
+                    <p className="text-white font-bold text-base sm:text-lg truncate">مراسلة فورية</p>
                   </div>
                 </a>
 
                 {/* Email */}
-                <a href="mailto:systemny.devmark26@gmail.com" className="flex items-center gap-5 group">
-                  <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-[#FF9B51] transition-all duration-300 border border-white/10 group-hover:border-[#FF9B51]">
+                <a href="mailto:systemny.devmark26@gmail.com" className="flex items-center gap-4 sm:gap-5 group w-full">
+                  <div className="w-12 h-12 shrink-0 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-[#FF9B51] transition-all duration-300 border border-white/10 group-hover:border-[#FF9B51]">
                     <HiOutlineMail className="w-5 h-5 text-white/80 group-hover:text-[#25343F] transition-colors duration-300" />
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <p className="text-white/60 text-xs font-medium mb-1">البريد الإلكتروني:</p>
-                    <p className="text-white font-bold text-sm sm:text-base tracking-wide" dir="ltr">
+                    <p className="text-white font-bold text-[13px] sm:text-base tracking-wide break-all" dir="ltr">
                       systemny.devmark26@gmail.com
                     </p>
                   </div>

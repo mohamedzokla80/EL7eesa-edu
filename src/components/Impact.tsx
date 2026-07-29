@@ -19,7 +19,7 @@ import ChartContainer from "@/components/ChartContainer";
 
 const effortData = [
   { name: "الطريقة التقليدية", value: 95, fill: "#BFC9D1" },
-  { name: "مع سيستمني", value: 10, fill: "#FF9B51" },
+  { name: "مع الحصة", value: 10, fill: "#FF9B51" },
 ];
 
 const pieData = [
@@ -67,14 +67,14 @@ export default function Impact() {
         >
           <div className="inline-flex items-center gap-2 bg-[#FF9B51]/10 px-5 py-2 rounded-full mb-6 border border-[#FF9B51]/20 shadow-sm">
             <span className="text-[#FF9B51] text-sm font-bold tracking-wider">
-              الفرق الذي نصنعه
+              بوابة الطالب المتكاملة
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 text-[#25343F]">
-            كيف سيغير <span className="text-[#FF9B51]">سيستمني</span> عملك؟
+            كيف تساهم بوابة الطالب في <span className="text-[#FF9B51]">رفع مستوى التفاعل؟</span>
           </h2>
           <p className="text-[#25343F]/80 text-lg max-w-2xl mx-auto font-medium">
-            أرقام حقيقية توضح الفارق الشاسع في الأداء والمجهود مقارنة بالطرق التقليدية المعتادة
+            تطبيق مخصص يجعل الطالب وولي الأمر على اطلاع دائم بكل التفاصيل لضمان أعلى درجات الالتزام والتفوق.
           </p>
         </motion.div>
 
@@ -90,10 +90,10 @@ export default function Impact() {
           >
             <div className="text-center mb-8">
               <h3 className="text-xl font-bold text-[#25343F] mb-2">
-                المجهود الإداري
+                متابعة الحضور والمدفوعات
               </h3>
               <p className="text-[#FF9B51] font-bold text-sm bg-[#FF9B51]/10 inline-block px-3 py-1 rounded-full">
-                انخفاض بنسبة 90%
+                وضوح تام للبيانات بنسبة 100%
               </p>
             </div>
 
@@ -131,14 +131,14 @@ export default function Impact() {
             <div className="p-5 bg-[#EAEFEF] rounded-2xl border border-[#BFC9D1]/30">
               <p className="text-sm text-[#25343F]/80 leading-relaxed">
                 <span className="text-[#25343F] font-bold">التقليدية:</span>{" "}
-                إرهاق كبير في مراجعة الكشوفات الورقية وتصحيح الامتحانات يدوياً.
+                صعوبة معرفة ولي الأمر بغياب الطالب أو تأخر المدفوعات.
               </p>
               <div className="w-full h-px bg-[#BFC9D1]/50 my-3" />
               <p className="text-sm text-[#25343F] leading-relaxed font-medium">
                 <span className="text-[#FF9B51] font-bold">
-                  مع سيستمني:
+                  مع الحصة:
                 </span>{" "}
-                كل شيء يتم آلياً بضغطة زر وبدون أي تدخل منك.
+                سجل كامل وواضح للحضور والغياب والمدفوعات عبر التطبيق.
               </p>
             </div>
           </motion.div>
@@ -155,10 +155,10 @@ export default function Impact() {
 
             <div className="text-center mb-8 relative z-10">
               <h3 className="text-xl font-bold text-white mb-2">
-                دقة الحسابات
+                الالتزام بالواجبات
               </h3>
               <p className="text-white/80 font-medium text-sm">
-                ضمان كامل للمدفوعات
+                متابعة مستمرة لتقييم الطالب
               </p>
             </div>
 
@@ -202,7 +202,7 @@ export default function Impact() {
                     fontSize="13"
                     fontWeight="500"
                   >
-                    دقة مالية
+                    حل الواجبات
                   </text>
                 </PieChart>
               )}
@@ -211,14 +211,14 @@ export default function Impact() {
             <div className="p-5 bg-white/10 rounded-2xl border border-white/10 relative z-10 backdrop-blur-sm">
               <p className="text-sm text-white/70 leading-relaxed">
                 <span className="text-white font-bold">التقليدية:</span>{" "}
-                ضياع الكثير من الوقت ووجود أخطاء مستمرة في تتبع أقساط الطلاب.
+                نسيان الواجبات أو ضياعها وعدم معرفة ولي الأمر بتقصير الطالب.
               </p>
               <div className="w-full h-px bg-white/10 my-3" />
               <p className="text-sm text-white leading-relaxed font-medium">
                 <span className="text-[#FF9B51] font-bold">
-                  مع سيستمني:
+                  مع الحصة:
                 </span>{" "}
-                تقارير واضحة ودقيقة لكل قرش يدخل السنتر.
+                إشعارات مستمرة وتنبيهات لضمان حل الواجبات في وقتها.
               </p>
             </div>
           </motion.div>
@@ -232,10 +232,10 @@ export default function Impact() {
           >
             <div className="text-center mb-8">
               <h3 className="text-xl font-bold text-[#25343F] mb-2">
-                تفاعل الطلاب
+                التواصل والإشعارات
               </h3>
               <p className="text-[#FF9B51] font-bold text-sm bg-[#FF9B51]/10 inline-block px-3 py-1 rounded-full border border-[#FF9B51]/20">
-                زيادة بنسبة 200%
+                تفاعل مستمر ومباشر
               </p>
             </div>
 
@@ -278,7 +278,7 @@ export default function Impact() {
                     fontSize="13"
                     fontWeight="500"
                   >
-                    ارتباط وتفاعل
+                    ارتباط وتواصل
                   </text>
                 </RadialBarChart>
               )}
@@ -287,14 +287,14 @@ export default function Impact() {
             <div className="p-5 bg-[#EAEFEF] rounded-2xl border border-[#BFC9D1]/30">
               <p className="text-sm text-[#25343F]/80 leading-relaxed">
                 <span className="text-[#25343F] font-bold">التقليدية:</span>{" "}
-                صعوبة التواصل المستمر مع الطلاب وأولياء الأمور خارج السنتر.
+                انقطاع التواصل مع الطالب بمجرد خروجه من السنتر.
               </p>
               <div className="w-full h-px bg-[#BFC9D1]/50 my-3" />
               <p className="text-sm text-[#25343F] leading-relaxed font-medium">
                 <span className="text-[#FF9B51] font-bold">
-                  مع سيستمني:
+                  مع الحصة:
                 </span>{" "}
-                انبهار الطلاب بالتطبيق والإشعارات المباشرة للموبايل.
+                مركز إشعارات متكامل ولافتات إجازات وتنبيهات مستمرة عبر التطبيق.
               </p>
             </div>
           </motion.div>
@@ -320,7 +320,7 @@ export default function Impact() {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-[#FF9B51] rounded-full shadow-sm" />
-                <span className="text-[#25343F] text-sm font-bold">مع سيستمني</span>
+                <span className="text-[#25343F] text-sm font-bold">مع الحصة</span>
               </div>
             </div>
           </div>
@@ -342,29 +342,29 @@ export default function Impact() {
                   height={height}
                   data={[
                     {
-                      category: isMobile ? "الإداري" : "المجهود الإداري",
-                      traditional: 95,
-                      systemny: 10,
+                      category: isMobile ? "الحضور" : "الالتزام بالحضور",
+                      traditional: 50,
+                      systemny: 95,
                     },
                     {
-                      category: isMobile ? "الحسابات" : "دقة الحسابات",
-                      traditional: 60,
-                      systemny: 100,
-                    },
-                    {
-                      category: isMobile ? "التفاعل" : "تفاعل الطلاب",
-                      traditional: 30,
+                      category: isMobile ? "الواجبات" : "حل الواجبات",
+                      traditional: 40,
                       systemny: 90,
                     },
                     {
-                      category: isMobile ? "التصحيح" : "سرعة التصحيح",
-                      traditional: 20,
-                      systemny: 98,
+                      category: isMobile ? "التواصل" : "التواصل المستمر",
+                      traditional: 30,
+                      systemny: 100,
                     },
                     {
-                      category: isMobile ? "المواعيد" : "تنظيم المواعيد",
+                      category: isMobile ? "المستوى" : "متابعة المستوى",
                       traditional: 40,
                       systemny: 95,
+                    },
+                    {
+                      category: isMobile ? "التنظيم" : "تنظيم وقت الطالب",
+                      traditional: 50,
+                      systemny: 90,
                     },
                   ]}
                   barSize={dynamicBarSize}
@@ -398,7 +398,7 @@ export default function Impact() {
                   />
                   <Bar
                     dataKey="systemny"
-                    name="مع سيستمني"
+                    name="مع الحصة"
                     fill="#FF9B51"
                     radius={[4, 4, 0, 0]}
                   />

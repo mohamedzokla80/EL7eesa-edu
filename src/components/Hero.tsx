@@ -50,33 +50,30 @@ export default function Hero() {
             >
               <span className="w-2 h-2 bg-[#FF9B51] rounded-full animate-pulse" />
               <span className="text-sm text-[#25343F]">
-                نظام إدارة سناتر متكامل
+                منظومة متكاملة للمعلم والطالب
               </span>
             </motion.div>
 
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-[1.7rem] sm:text-5xl lg:text-6xl font-black leading-tight mb-6 text-[#25343F]"
             >
-              ريح بالك..{" "}
+              منصة واحدة..
               <br />
-              <span className="gradient-text">وأدِر سنترك وطلابك</span>
+              <span className="gradient-text">لوحة تحكم للمعلم وبوابة ذكية للطالب</span>
               <br />
-              بكل سهولة مع{" "}
-              <span className="gradient-text">&quot;سيستمني&quot;</span>
+              في نظام <span className="gradient-text">الحصة</span>
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-base sm:text-lg text-[#25343F]/80 leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto px-1 sm:px-0"
             >
-              نظام متكامل صُمم خصيصاً للمعلمين لتسهيل إدارة الحصص، متابعة
-              الغياب، تنظيم الحسابات، وتوفير تطبيق خاص لطلابك.. كل هذا من مكان
-              واحد لتوفر وقتك ومجهودك.
+              مرحباً بك في الدليل الشامل لجميع الميزات والخصائص المدمجة في منصة الحصة التعليمية (El7essa EduPlatform). تنقسم المنصة إلى شقين رئيسيين: لوحة تحكم المعلم (Teacher Portal) وبوابة الطالب (Student Portal).
             </motion.p>
 
             <motion.div 

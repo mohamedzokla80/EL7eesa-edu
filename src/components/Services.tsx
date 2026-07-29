@@ -13,46 +13,85 @@ import {
 
 const services = [
   {
-    id: "01",
-    icon: <HiOutlineOfficeBuilding className="w-7 h-7" />,
-    title: "إدارة السناتر",
-    description:
-      "نظم مواعيدك، أضف السنين الدراسية والمجموعات المختلفة، وتابع أعداد الطلاب في كل مجموعة بضغطة زر.",
-  },
-  {
-    id: "02",
-    icon: <HiOutlineClipboardList className="w-7 h-7" />,
-    title: "الحضور والغياب",
-    description:
-      "تخلص من الكشوفات الورقية؛ سجل حضور طلابك فورياً، واعرف من تغيب لسهولة المتابعة مع أولياء الأمور.",
-  },
-  {
-    id: "03",
-    icon: <HiOutlineCurrencyDollar className="w-7 h-7" />,
-    title: "الحسابات والمدفوعات",
-    description:
-      "لا مزيد من الحسابات المعقدة. تابع مدفوعات الطلاب والأقساط المتأخرة بدقة متناهية وبدون أي نسبة خطأ.",
-  },
-  {
-    id: "04",
-    icon: <HiOutlineDocumentText className="w-7 h-7" />,
-    title: "الامتحانات والواجبات",
-    description:
-      "وفر وقت التصحيح. صمم امتحاناتك وواجباتك، ودع النظام يصححها لك فوراً مع عرض نتائج كل طالب.",
-  },
-  {
     id: "05",
-    icon: <HiOutlineDeviceMobile className="w-7 h-7" />,
-    title: "تطبيق الطلاب",
-    description:
-      "نوفر لطلابك تطبيقاً خاصاً بهم لمشاهدة حصصك، متابعة غيابهم، ومعرفة درجاتهم.. مما يعكس صورتك الاحترافية.",
+    icon: <HiOutlineDocumentText className="w-7 h-7" />,
+    title: "5. نظام الإجازات الرسمية",
+    description: (
+      <ul className="list-disc list-inside space-y-2 text-right">
+        <li><strong>تقويم إجازات المجموعة:</strong> أداة متكاملة تتيح للمدرس الضغط على أي يوم لتحديده كإجازة رسمية.</li>
+        <li><strong>التعطيل التلقائي للحضور:</strong> إيقاف تسجيل الحضور والغياب لهذا اليوم تلقائياً.</li>
+        <li><strong>إشعارات وتنبيهات:</strong> لافتة مميزة (Holiday Banner) لمنع حضور الطلاب للسنتر دون داعٍ.</li>
+      </ul>
+    ),
   },
   {
     id: "06",
+    icon: <HiOutlineDeviceMobile className="w-7 h-7" />,
+    title: "6. الامتحانات الحضورية",
+    description: (
+      <ul className="list-disc list-inside space-y-2 text-right">
+        <li><strong>إضافة امتحانات السنتر:</strong> إنشاء سجل للامتحان وتحديد تاريخه والدرجة النهائية الكبرى.</li>
+        <li><strong>رصد درجات الطلاب يدوياً:</strong> رصد سريع أو تحديد الطالب كغائب.</li>
+        <li><strong>تحليل أداء الامتحانات:</strong> حساب متوسط الدرجات ونسبة النجاح والرسوب.</li>
+      </ul>
+    ),
+  },
+  {
+    id: "07",
+    icon: <HiOutlineCurrencyDollar className="w-7 h-7" />,
+    title: "7. المالية والمديونيات",
+    description: (
+      <ul className="list-disc list-inside space-y-2 text-right">
+        <li><strong>تسجيل المدفوعات:</strong> تسجيل اشتراك الطالب وتحديد المبلغ ونوع الدفع.</li>
+        <li><strong>إدارة المديونيات والدين:</strong> تتبع المديونيات تلقائياً وتسويتها، والتنازل أو الخصم.</li>
+        <li><strong>تتبع تحصيل المجموعات:</strong> عرض إجمالي المبالغ، الديون القائمة، ومعدل التحصيل.</li>
+      </ul>
+    ),
+  },
+  {
+    id: "08",
+    icon: <HiOutlineOfficeBuilding className="w-7 h-7" />,
+    title: "8. نظام الفيديوهات والكورسات",
+    description: (
+      <ul className="list-disc list-inside space-y-2 text-right">
+        <li><strong>إنشاء الكورسات:</strong> رفع وتنظيم الدروس التعليمية.</li>
+        <li><strong>خيارات متقدمة:</strong> المشاهدة التتابعية، تحديد حد أقصى للمشاهدة، ومنع تسريع الفيديو.</li>
+        <li><strong>إحصائيات المشاهدة:</strong> تتبع دقيق لكل فيديو ونسبة تقدم كل طالب.</li>
+      </ul>
+    ),
+  },
+  {
+    id: "09",
+    icon: <HiOutlineClipboardList className="w-7 h-7" />,
+    title: "9. نظام الكويزات أونلاين",
+    description: (
+      <ul className="list-disc list-inside space-y-2 text-right">
+        <li><strong>منشئ الكويزات:</strong> تحديد المدة، منع العودة للخلف، خلط عشوائي، وجدولة الوقت.</li>
+        <li><strong>تنوع الأسئلة والمراقبة:</strong> MCQ ومقالي، ومراقبة الكويز لحظياً.</li>
+        <li><strong>تصحيح المقالي:</strong> لوحة خاصة لتصحيح ورصد درجات الأسئلة المقالية يدوياً.</li>
+      </ul>
+    ),
+  },
+  {
+    id: "10",
     icon: <HiOutlineChartPie className="w-7 h-7" />,
-    title: "التقارير والإحصائيات",
-    description:
-      "قراراتك مبنية على أرقام دقيقة وحقيقية من خلال لوحة تحكم مفصلة توضح أداء السنتر مالياً وإدارياً.",
+    title: "10. مرسل الإشعارات والرسائل",
+    description: (
+      <ul className="list-disc list-inside space-y-2 text-right">
+        <li><strong>استهداف دقيق:</strong> إرسال إشعارات مخصصة لطلاب الأونلاين أو طلاب السنتر حسب المجموعة.</li>
+        <li><strong>إشعارات تلقائية:</strong> تحديثات فورية عند نشر امتحان، قبول العضوية، ورصد الدرجات.</li>
+      </ul>
+    ),
+  },
+  {
+    id: "11",
+    icon: <HiOutlineDocumentText className="w-7 h-7" />,
+    title: "11. جدول المهام والتخطيط",
+    description: (
+      <ul className="list-disc list-inside space-y-2 text-right">
+        <li>مفكرة شخصية وجدول مهام يومي للمدرس لإدارة مواعيده والتخطيط للدروس القادمة بكفاءة.</li>
+      </ul>
+    ),
   }
 ];
 
@@ -78,10 +117,10 @@ export default function Services() {
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 text-[#25343F]">
             كل ما تحتاجه{" "}
-            <span className="text-[#FF9B51]">لإدارة سنترك</span>
+            <span className="text-[#FF9B51]">لإدارة سنترك الحضوري</span>
           </h2>
           <p className="text-[#25343F]/80 text-lg max-w-2xl mx-auto leading-relaxed">
-            خدمات متكاملة صُممت خصيصاً لتحل جميع مشاكلك الإدارية وتوفر لك الوقت والمجهود للتركيز على التدريس.
+            نظام مخصص للتحكم الكامل في السنتر من شؤون الطلاب والماليات والحضور بسهولة واحترافية.
           </p>
         </motion.div>
 
@@ -90,7 +129,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="flex flex-col lg:flex-row gap-3 w-full h-auto lg:h-[450px]"
+          className="flex flex-col lg:flex-row gap-3 w-full h-auto lg:h-[550px]"
         >
           {services.map((service, i) => {
             const isActive = activeService === i;
@@ -101,8 +140,8 @@ export default function Services() {
                 onClick={() => setActiveService(i)}
                 className={`relative overflow-hidden rounded-[1.5rem] lg:rounded-[2rem] cursor-pointer transition-all duration-700 ease-in-out border flex flex-col items-center justify-center lg:justify-between ${
                   isActive 
-                    ? "lg:flex-[3] flex-none h-[320px] lg:h-full bg-[#25343F] border-transparent shadow-xl p-6 lg:p-8 hover:shadow-[0_0_40px_rgba(255,155,81,0.25)] hover:border-[#FF9B51]/40 hover:-translate-y-1" 
-                    : "lg:flex-[1] flex-none h-[80px] lg:h-full bg-white border-[#BFC9D1]/50 hover:bg-[#EAEFEF]/50 px-6 lg:py-8 lg:px-6 hover:shadow-[0_0_40px_rgba(255,155,81,0.2)] hover:border-[#FF9B51]/40 hover:-translate-y-1"
+                    ? "lg:flex-[3] flex-none h-auto lg:h-full bg-[#25343F] border-transparent shadow-xl p-6 lg:p-8 hover:shadow-[0_0_40px_rgba(255,155,81,0.25)] hover:border-[#FF9B51]/40 hover:-translate-y-1" 
+                    : "lg:flex-[1] flex-none min-h-[80px] h-auto lg:h-full bg-white border-[#BFC9D1]/50 hover:bg-[#EAEFEF]/50 px-6 py-4 lg:py-8 hover:shadow-[0_0_40px_rgba(255,155,81,0.2)] hover:border-[#FF9B51]/40 hover:-translate-y-1"
                 }`}
               >
                 {/* Background Number */}
@@ -128,9 +167,9 @@ export default function Services() {
                     <h3 className="text-2xl font-bold text-[#EAEFEF] mb-4 text-center">
                       {service.title}
                     </h3>
-                    <p className="text-[#BFC9D1] text-center leading-relaxed max-w-sm">
+                    <div className="text-[#BFC9D1] leading-relaxed w-full max-w-lg mx-auto text-sm sm:text-base">
                       {service.description}
-                    </p>
+                    </div>
                   </motion.div>
                 ) : (
                   /* Collapsed Content */
@@ -158,7 +197,7 @@ export default function Services() {
                         {service.icon}
                       </div>
                       {/* Title on the left */}
-                      <span className="text-[#25343F] font-bold whitespace-nowrap block tracking-wide flex-1 text-right">
+                      <span className="text-[#25343F] font-bold block tracking-wide flex-1 text-right text-sm leading-relaxed">
                         {service.title}
                       </span>
                     </div>

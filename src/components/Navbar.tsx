@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { Logo } from "./Logo";
 import { HiOutlineMenu, HiOutlineX, HiOutlineArrowLeft } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -68,21 +69,8 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
-          <div
-            className="flex items-center gap-3 cursor-pointer group"
-            onClick={() => handleNavClick("#home")}
-          >
-            <Image
-              src="/logo.png"
-              alt="سيستمني"
-              width={45}
-              height={45}
-              className="rounded-xl border border-[#BFC9D1]/50 group-hover:opacity-80 transition-opacity"
-              priority
-            />
-            <span className="text-xl font-black text-[#25343F] tracking-tight">
-              سيستمني
-            </span>
+          <div onClick={() => handleNavClick("#home")}>
+            <Logo size="lg" className="hover:opacity-90 transition-opacity" />
           </div>
 
           {/* Desktop Nav */}

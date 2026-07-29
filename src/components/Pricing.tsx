@@ -112,7 +112,7 @@ export default function Pricing() {
             </div>
 
             {/* Horizontal Content: Price Left + Features Right */}
-            <div className="flex flex-col lg:flex-row min-h-[500px]">
+            <div className="flex flex-col lg:flex-row">
               
               {/* Right Side (RTL) - Price & CTA */}
               <div className="lg:w-[35%] bg-[#25343F] flex flex-col items-center justify-center py-12 px-6 sm:px-8 text-center border-b lg:border-b-0 lg:border-l border-[#BFC9D1]/20">
@@ -161,63 +161,61 @@ export default function Pricing() {
               </div>
 
               {/* Left Side (RTL) - Features */}
-              <div className="lg:w-[65%] py-8 px-5 sm:px-8 lg:px-10 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-[#25343F] font-bold text-lg mb-6 border-r-4 border-[#FF9B51] pr-3 text-right">
-                    المميزات المضمنة في النظام:
+              <div className="lg:w-[65%] py-12 px-6 sm:px-10 lg:px-12 flex flex-col justify-center relative overflow-hidden">
+                {/* Background Decor */}
+                <div className="absolute -top-32 -left-32 w-80 h-80 bg-gradient-to-br from-[#FF9B51]/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-gradient-to-tl from-[#25343F]/5 to-transparent rounded-full blur-3xl pointer-events-none" />
+                
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                  className="relative z-10 text-center flex flex-col items-center"
+                >
+                  {/* Icon */}
+                  <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-[#FF9B51] to-[#e88a3f] rounded-[2rem] shadow-2xl shadow-[#FF9B51]/30 mb-8 transform -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500">
+                    <HiOutlineSupport className="w-12 h-12 text-white" />
+                  </div>
+                  
+                  {/* Headline */}
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#25343F] mb-5 leading-[1.4]">
+                    استلم سيستم السنتر الخاص بك <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF9B51] to-[#d67b36]">
+                      جاهز ومستقر 100%
+                    </span>
                   </h3>
                   
-                  <div className="grid sm:grid-cols-2 gap-3.5">
-                    {coreFeatures.map((feature, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, y: 15 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ delay: 0.3 + i * 0.05, duration: 0.4 }}
-                        className="flex items-center gap-3 p-3 bg-[#EAEFEF]/30 border border-[#BFC9D1]/30 rounded-2xl hover:bg-white hover:border-[#FF9B51]/40 hover:shadow-[0_4px_20px_rgba(37,52,63,0.06)] transition-all duration-300 group cursor-default"
-                      >
-                        <div className="w-8.5 h-8.5 bg-white border border-[#BFC9D1]/50 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm transition-all duration-300 group-hover:bg-[#FF9B51] group-hover:border-[#FF9B51] group-hover:scale-105">
-                          {feature.icon}
-                        </div>
-                        <span className="text-[#25343F] text-xs sm:text-sm font-bold transition-colors duration-300 group-hover:text-[#FF9B51] text-right">
-                          {feature.title}
-                        </span>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
+                  {/* Description */}
+                  <p className="text-[#25343F]/75 text-base sm:text-lg max-w-lg mx-auto leading-relaxed mb-10">
+                    نحن نهتم بالجانب التقني بالكامل. استمتع بسنة أولى من الاستضافة والدعم الفني المجاني بدون أي رسوم خفية، لتركز فقط على إدارة طلابك.
+                  </p>
 
-                {/* Special Support & Maintenance Highlight Card */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: 0.8, duration: 0.5 }}
-                  className="mt-8 p-4 bg-[#FF9B51]/10 border border-[#FF9B51]/30 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 relative overflow-hidden group/support"
-                >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF9B51]/5 rounded-full blur-2xl pointer-events-none" />
-                  <div className="flex items-center gap-3.5 text-right w-full sm:w-auto">
-                    <div className="w-12 h-12 bg-[#FF9B51] rounded-xl flex items-center justify-center text-white shadow-md shadow-[#FF9B51]/20 flex-shrink-0 animate-pulse-slow">
-                      <HiOutlineSupport className="w-6 h-6" />
+                  {/* Pricing Comparison */}
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full max-w-xl mx-auto">
+                    
+                    {/* First Year */}
+                    <div className="bg-[#EAEFEF]/60 border border-[#BFC9D1]/50 px-6 py-5 rounded-3xl w-full sm:w-1/2 relative overflow-hidden group">
+                      <span className="block text-[11px] font-bold text-[#BFC9D1] uppercase tracking-[0.15em] mb-2">السنة الأولى</span>
+                      <span className="text-2xl font-black text-[#25343F]">مجاناً بالكامل</span>
                     </div>
-                    <div>
-                      <h4 className="text-[#25343F] font-bold text-sm sm:text-base leading-snug">
-                        صيانة ودعم فني <span className="text-[#FF9B51] font-black underline decoration-2 underline-offset-4">مجاني بالكامل</span> طوال السنة الأولى!
-                      </h4>
-                      <p className="text-[#25343F]/75 text-xs sm:text-sm mt-0.5">
-                        نضمن لك استقرار وسرعة نظامك دون أي أعباء إضافية.
-                      </p>
+
+                    {/* Arrow (Hidden on mobile) */}
+                    <div className="hidden sm:flex items-center justify-center text-[#BFC9D1]">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 12H5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
                     </div>
-                  </div>
-                  <div className="bg-[#25343F] text-white px-5 py-2.5 rounded-xl border border-white/10 shadow-lg flex-shrink-0 text-center w-full sm:w-auto relative group-hover/support:scale-105 transition-transform duration-300">
-                    <span className="block text-[9px] text-[#FF9B51] font-extrabold tracking-wider uppercase mb-0.5">
-                      بعد السنة الأولى
-                    </span>
-                    <span className="text-xs sm:text-sm font-black block whitespace-nowrap">
-                      صيانة سنوية بـ <span className="text-base sm:text-lg text-[#FF9B51] font-black">1,500 جنيه</span> فقط!
-                    </span>
+
+                    {/* Renewal */}
+                    <div className="bg-[#25343F] border border-[#25343F] px-6 py-5 rounded-3xl shadow-xl shadow-[#25343F]/20 w-full sm:w-1/2 relative group overflow-hidden transition-transform duration-300 hover:-translate-y-1">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
+                      <span className="block text-[11px] font-bold text-[#FF9B51] uppercase tracking-[0.15em] mb-2">التجديد السنوي (اختياري)</span>
+                      <span className="text-2xl font-black text-white">1,500 <span className="text-sm font-medium text-white/70">جنيه فقط</span></span>
+                    </div>
+
                   </div>
                 </motion.div>
-
               </div>
 
             </div>

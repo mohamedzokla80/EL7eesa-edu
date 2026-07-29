@@ -2,7 +2,12 @@
 
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaWhatsapp, FaTiktok, FaYoutube } from "react-icons/fa";
-import { HiOutlineChevronLeft, HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
+import { 
+  HiOutlineLocationMarker, 
+  HiOutlineMail, 
+  HiOutlinePhone 
+} from "react-icons/hi";
+import { Logo } from "./Logo";
 import { motion } from "framer-motion";
 
 const footerLinks = [
@@ -60,7 +65,7 @@ export default function Footer() {
             <div className="flex flex-col justify-center items-center md:items-start relative z-10 h-full">
               <div className="text-center md:text-right">
                 <h2 className="text-4xl lg:text-5xl font-black text-white mb-4 leading-tight">
-                  سيستمني
+                  الحصة
                 </h2>
                 <p className="text-white/80 text-base md:text-lg max-w-lg leading-relaxed">
                   النظام الأسهل لإدارة السناتر التعليمية. وفر وقتك ومجهودك وركز
@@ -143,19 +148,9 @@ export default function Footer() {
         >
           
           {/* Logo / Brand */}
-          <button 
-            onClick={() => handleNavClick('#home')}
-            className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300"
-          >
-            <Image
-              src="/logo.png"
-              alt="سيستمني"
-              width={36}
-              height={36}
-              className="rounded-xl border border-[#BFC9D1]/50"
-            />
-            <span className="font-bold text-[#25343F] tracking-wide text-lg">سيستمني</span>
-          </button>
+          <div onClick={() => handleNavClick('#home')}>
+            <Logo size="md" className="hover:opacity-90 transition-opacity" />
+          </div>
 
           {/* EST Date (Center) */}
           <div className="text-[#BFC9D1] font-bold tracking-[0.2em] text-xs uppercase">
@@ -188,8 +183,7 @@ export default function Footer() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-center text-sm font-medium text-[#25343F]/80 flex items-center justify-center gap-1"
         >
-          <span>جميع الحقوق محفوظة لـ سيستمني</span>
-          <span dir="ltr">© 2026</span>
+          <span>جميع الحقوق محفوظة لـ الحصة © {new Date().getFullYear()}</span>
         </motion.div>
 
       </div>
